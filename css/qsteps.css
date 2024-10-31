@@ -1,0 +1,327 @@
+.q-widget {
+    margin: 50px auto;
+    height: auto;
+}
+
+.q-body button.exchange-button {
+    top: 0;
+}
+
+.q-widget .fields {
+    margin-top: 30px;
+}
+
+.q-widget .field {
+    position: relative;
+    margin-top: 10px;
+}
+
+.q-field-success.hidden {
+    display: none;
+}
+
+.q-field-success {
+    position: absolute;
+    left: calc(100% - 30px);
+    top: 54px;
+}
+
+.q-widget input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid rgba(132, 142, 156, 0.3);
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+.q-widget input.success {
+    border-color: #0BB526;
+}
+.q-widget input.error {
+    border-color: #F44242;
+}
+
+.q-widget input::-webkit-input-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(132, 142, 156, 0.3);
+}
+
+.q-widget input::-moz-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(132, 142, 156, 0.3);
+}
+
+/* Firefox 19+ */
+.q-widget input:-moz-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(132, 142, 156, 0.3);
+}
+
+/* Firefox 18- */
+.q-widget input:-ms-input-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(132, 142, 156, 0.3);
+}
+
+.q-widget label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #848E9C;
+}
+
+#q-checkbox-input {
+    width: 15px;
+    height: 15px;
+    padding: 0!important;
+}
+
+.q-widget label.checkbox-inline span {
+    position: relative;
+    top: -3px;
+}
+
+.q-widget label.checkbox-inline {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #848E9C;
+}
+
+.q-widget label.checkbox-inline a {
+    color: #848E9C !important;
+}
+
+.q-body {
+    color: #212833;
+    width: 100%;
+    padding: 40px;
+    padding-top: 28px;
+}
+
+.q-body small {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #212833;
+    opacity: 0.3;
+}
+
+#qtitle {
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 38px;
+    color: #212833;
+}
+
+.q-body a {
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #212833 !important;
+}
+
+.q-body .breadcrumbs-label {
+    font-size: 18px;
+    line-height: 24px;
+    opacity: 0.3;
+    margin-left: 5px;
+}
+
+.q-body .title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    display: block;
+    margin-top: 40px;
+}
+
+.q-body .text {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #F44242;
+    display: block;
+}
+
+.q-body .exchange-status {
+    border-radius: 3px;
+    width: 100%;
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-top: 12px;
+    position: relative;
+}
+.q-body .exchange-status .bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--themeColor);
+    opacity: .65;
+}
+
+.q-body .exchange-status .status-name {
+    position: relative;
+    color: var(--themeTextColor) !important;
+    font-size: 18px;
+    line-height: 48px;
+}
+
+.q-body .exchange-status .progress {
+    background: var(--themeColor);
+    position: absolute;
+    height: 100%;
+    width: 55%;
+}
+
+.q-body .info {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.q-body .info .transaction-info {
+    min-width: 160px;
+}
+
+.q-body .info .destination-info {
+    margin-left: 24px;
+    width: calc(100% - 160px);
+}
+
+.q-body .block {
+    margin-top: 17px;
+}
+
+.q-body .block .header {
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(132, 142, 156, 0.5);
+    display: block;
+}
+
+.q-body .block .value {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #848E9C;
+    display: block;
+    word-wrap: break-word;
+}
+
+.q-body .qtitle-text {
+    font-size: 14px;
+    line-height: 18px;
+    color: #848E9C;
+}
+
+.q-body .send-address {
+    margin-top: 38px;
+}
+
+.q-body .send-address label {
+    font-size: 14px;
+    line-height: 18px;
+    color: #848E9C;
+}
+
+.q-body .send-address .address-block {
+    border: 1px solid rgba(132, 142, 156, 0.3);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.q-body .send-address .address-padding {
+    padding: 20px 20px 19px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.q-body .send-address .address-value {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+.q-body .send-address .copy-link {
+    background: #C1C6CD;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 11px;
+    line-height: 15px;
+    align-items: center;
+    text-align: center;
+    padding: 2px 12px;
+    color: #FFFFFF;
+    width: 58px;
+    height: 18px;
+    text-decoration: none !important;
+    margin-top: 4px;
+}
+
+.q-body .time-text {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #848E9C;
+    margin-top: 32px;
+}
+
+.q-body .email-text {
+    width: 349px;
+}
+
+.q-body .email-form {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 60px;
+}
+
+.q-body .email-form input {
+    height: 100%;
+}
+
+.q-body .email-form a {
+    background: var(--themeColor);
+    border-radius: 3px;
+    color: #212833;
+    padding-top: 20px;
+    text-align: center;
+    width: 210px;
+    cursor: pointer;
+}
+
+.q-body .email-form .success-send-email {
+    font-size: 18px;
+    line-height: 60px;
+    color: #848E9C;
+    margin-left: 6px;
+}
+
+.q-body .success-send {
+    display: none;
+}

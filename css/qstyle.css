@@ -1,0 +1,1412 @@
+.q-widget :active, .q-widget :hover, .q-widget :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.q-widget {
+    max-width: 720px;
+    height: 410px;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif !important;
+    border: solid 0px #fff;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.q-header {
+    width: 100%;
+    height: 80px;
+    font-size: 24px;
+    color: #212833;
+    text-align: center;
+    border-bottom: solid 1px var(--themeColor);
+    padding-top: 20px;
+}
+
+.q-body {
+    width: 100%;
+    padding: 40px;
+    padding-top: 10px;
+}
+
+.q-body label {
+    color: #848E9C;
+    font-size: 14px;
+    text-align: left;
+}
+
+.q-body .exchange__input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid rgba(132, 142, 156, 0.3) !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    color: #212833 !important;
+}
+
+.q-body .exchange__input:focus {
+    border: 1px solid var(--themeColor) !important;
+}
+
+.q-body button.exchange-button[disabled] {
+    opacity: .65;
+    cursor: auto;
+}
+
+.q-body button.exchange-button:hover {
+    text-decoration: none;
+}
+
+.q-body button.exchange-button {
+    width: 100%;
+    height: 48px;
+    background: var(--themeColor);
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: var(--themeTextColor);
+    position: relative;
+    top: -45px;
+}
+
+.q-body .reverse {
+    position: relative;
+    left: calc(100% - 40px);
+    top: -20px;
+    cursor: pointer;
+    width: 40px;
+    z-index: 1051;
+}
+
+.q-body .q-to {
+    position: relative;
+    top: -40px;
+}
+
+.exchange__error {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 11px;
+    color: #F44242;
+    position: relative;
+    top: 90px;
+    display: flex;
+    visibility: hidden;
+}
+
+.exchange__error.active {
+    visibility: visible;
+}
+
+.exchange__error svg {
+    float: left;
+    margin-right: 5px;
+}
+
+.exchange__error .text {
+    float: left;
+}
+
+.exchange__info {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 18px;
+    color: #848E9C;
+    opacity: 0.5;
+    position: relative;
+    top: 90px;
+    display: flex;
+}
+
+.select2-container--currency {
+    left: calc(100% - 125px);
+    width: 125px;
+    position: relative;
+    top: -40px;
+    border: solid 0px #fff !important;
+}
+
+.select2-selection__rendered {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #848E9C;
+    text-align: right;
+}
+
+.select2-results__option {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    color: #848E9C;
+}
+
+.focus .select2-container.select2-container--currency .select2-search__field:hover {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.focus .select2-container.select2-container--currency .select2-search__field:focus {
+    border-color: rgba(54, 65, 83, .2);
+    border: solid 0px #fff;
+}
+
+.focus .select2-search__close:focus {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: #c71c2c
+}
+
+.icon_R, .select2-results__option[id*='R'], .select2-selection__rendered[title='R'] {
+    background-image: url(https://quickex.io/images/coins/R.svg)
+}
+
+.select2-results__option[id*='R']::after {
+    content: 'Revain'
+}
+
+.icon_USD, .select2-results__option[id*=USD]:not([id*=USDT]):not([id*=TUSD]):not([id*=GUSD]):not([id*=USDC]), .select2-selection__rendered[title=USD] {
+    background-image: url(https://quickex.io/images/coins/USD.svg)
+}
+
+.select2-results__option[id*=USD]:not([id*=USDT]):not([id*=TUSD]):not([id*=GUSD]):not([id*=USDC]):after {
+    content: 'US dollar'
+}
+
+.icon_EUR, .select2-results__option[id*=EUR]:not([id*=EURS]), .select2-selection__rendered[title=EUR] {
+    background-image: url(https://quickex.io/images/coins/EUR.svg)
+}
+
+.select2-results__option[id*=EUR]:not([id*=EURS]):after {
+    content: 'Euro'
+}
+
+.icon_BCH, .select2-results__option[id*=BCH]:not([id*=BCHSV]):not([id*=BCHABC]), .select2-selection__rendered[title=BCH] {
+    background-image: url(https://quickex.io/images/coins/BCH.svg)
+}
+
+.select2-results__option[id*=BCH]:not([id*=BCHSV]):not([id*=BCHABC]):after {
+    content: 'Bitcoin Cash'
+}
+
+.icon_UTNP, .select2-results__option[id*=UTNP], .select2-selection__rendered[title=UTNP] {
+    display: none
+}
+
+.icon_RUB, .select2-results__option[id*=RUB], .select2-selection__rendered[title=RUB] {
+    background-image: url(https://quickex.io/images/coins/RUB.svg)
+}
+
+.select2-results__option[id*=RUB]::after {
+    content: 'Ruble'
+}
+
+.icon_BTC, .select2-results__option[id*=BTC], .select2-selection__rendered[title=BTC] {
+    background-image: url(https://quickex.io/images/coins/BTC.svg)
+}
+
+.select2-results__option[id*=BTC]::after {
+    content: 'Bitcoin'
+}
+
+.icon_ETH, .select2-results__option[id*=ETH], .select2-selection__rendered[title=ETH] {
+    background-image: url(https://quickex.io/images/coins/ETH.svg)
+}
+
+.select2-results__option[id*=ETH]::after {
+    content: 'Ethereum'
+}
+
+.icon_ETC, .select2-results__option[id*=ETC], .select2-selection__rendered[title=ETC] {
+    background-image: url(https://quickex.io/images/coins/ETC.svg)
+}
+
+.select2-results__option[id*=ETC]::after {
+    content: 'Ethereum Classic'
+}
+
+.icon_EXP, .select2-results__option[id*=EXP], .select2-selection__rendered[title=EXP] {
+    background-image: url(https://quickex.io/images/coins/EXP.svg)
+}
+
+.select2-results__option[id*=EXP]::after {
+    content: 'Expanse'
+}
+
+.icon_XEM, .select2-results__option[id*=XEM], .select2-selection__rendered[title=XEM] {
+    background-image: url(https://quickex.io/images/coins/XEM.svg)
+}
+
+.select2-results__option[id*=XEM]::after {
+    content: 'Xem'
+}
+
+.icon_LSK, .select2-results__option[id*=LSK], .select2-selection__rendered[title=LSK] {
+    background-image: url(https://quickex.io/images/coins/LSK.svg)
+}
+
+.select2-results__option[id*=LSK]::after {
+    content: 'Lisk'
+}
+
+.icon_XMR, .select2-results__option[id*=XMR], .select2-selection__rendered[title=XMR] {
+    background-image: url(https://quickex.io/images/coins/XMR.svg)
+}
+
+.select2-results__option[id*=XMR]::after {
+    content: 'Monero'
+}
+
+.icon_ZEC, .select2-results__option[id*=ZEC], .select2-selection__rendered[title=ZEC] {
+    background-image: url(https://quickex.io/images/coins/ZEC.svg)
+}
+
+.select2-results__option[id*=ZEC]::after {
+    content: 'Zcash'
+}
+
+.icon_NLG, .select2-results__option[id*=NLG], .select2-selection__rendered[title=NLG] {
+    background-image: url(https://quickex.io/images/coins/NLG.svg)
+}
+
+.select2-results__option[id*=NLG]::after {
+    content: 'Gulden'
+}
+
+.icon_STRAT, .select2-results__option[id*=STRAT], .select2-selection__rendered[title=STRAT] {
+    background-image: url(https://quickex.io/images/coins/STRAT.svg)
+}
+
+.select2-results__option[id*=STRAT]::after {
+    content: 'Stratis'
+}
+
+.icon_ARDR, .select2-results__option[id*=ARDR], .select2-selection__rendered[title=ARDR] {
+    background-image: url(https://quickex.io/images/coins/ARDR.svg)
+}
+
+.select2-results__option[id*=ARDR]::after {
+    content: 'Ardor'
+}
+
+.icon_REP, .select2-results__option[id*=REP], .select2-selection__rendered[title=REP] {
+    background-image: url(https://quickex.io/images/coins/REP.svg)
+}
+
+.select2-results__option[id*=REP]::after {
+    content: 'Augur'
+}
+
+.icon_LBC, .select2-results__option[id*=LBC], .select2-selection__rendered[title=LBC] {
+    background-image: url(https://quickex.io/images/coins/LBC.svg)
+}
+
+.select2-results__option[id*=LBC]::after {
+    content: 'LBRY Credits'
+}
+
+.icon_MAID, .select2-results__option[id*=MAID], .select2-selection__rendered[title=MAID] {
+    background-image: url(https://quickex.io/images/coins/MAID.svg)
+}
+
+.select2-results__option[id*=MAID]::after {
+    content: 'MaidSafeCoin'
+}
+
+.icon_LTC, .select2-results__option[id*=LTC], .select2-selection__rendered[title=LTC] {
+    background-image: url(https://quickex.io/images/coins/LTC.svg)
+}
+
+.select2-results__option[id*=LTC]::after {
+    content: 'Litecoin'
+}
+
+.icon_XRP, .select2-results__option[id*=XRP], .select2-selection__rendered[title=XRP] {
+    background-image: url(https://quickex.io/images/coins/XRP.svg)
+}
+
+.select2-results__option[id*=XRP]::after {
+    content: 'Ripple'
+}
+
+.icon_DOGE, .select2-results__option[id*=DOGE], .select2-selection__rendered[title=DOGE] {
+    background-image: url(https://quickex.io/images/coins/DOGE.svg)
+}
+
+.select2-results__option[id*=DOGE]::after {
+    content: 'Dogecoin'
+}
+
+.icon_AMP, .select2-results__option[id*=AMP], .select2-selection__rendered[title=AMP] {
+    background-image: url(https://quickex.io/images/coins/AMP.svg)
+}
+
+.select2-results__option[id*=AMP]::after {
+    content: 'HyperSpace (Synereo)'
+}
+
+.icon_NXT, .select2-results__option[id*=NXT], .select2-selection__rendered[title=NXT] {
+    background-image: url(https://quickex.io/images/coins/NXT.svg)
+}
+
+.select2-results__option[id*=NXT]::after {
+    content: 'Nxt'
+}
+
+.icon_DASH, .select2-results__option[id*=DASH], .select2-selection__rendered[title=DASH] {
+    background-image: url(https://quickex.io/images/coins/DASH.svg)
+}
+
+.select2-results__option[id*=DASH]::after {
+    content: 'Dash'
+}
+
+.icon_USNBT, .select2-results__option[id*=USNBT], .select2-selection__rendered[title=USNBT] {
+    background-image: url(https://quickex.io/images/coins/USNBT.svg)
+}
+
+.select2-results__option[id*=USNBT]::after {
+    content: 'NuBits'
+}
+
+.icon_NAV, .select2-results__option[id*=NAV], .select2-selection__rendered[title=NAV] {
+    background-image: url(https://quickex.io/images/coins/NAV.svg)
+}
+
+.select2-results__option[id*=NAV]::after {
+    content: 'NAV Coin'
+}
+
+.icon_POT, .select2-results__option[id*=POT], .select2-selection__rendered[title=POT] {
+    background-image: url(https://quickex.io/images/coins/POT.svg)
+}
+
+.select2-results__option[id*=POT]::after {
+    content: 'Potcoin'
+}
+
+.icon_GNT, .select2-results__option[id*=GNT], .select2-selection__rendered[title=GNT] {
+    background-image: url(https://quickex.io/images/coins/GNT.svg)
+}
+
+.select2-results__option[id*=GNT]::after {
+    content: 'Golem'
+}
+
+.icon_WAVES, .select2-results__option[id*=WAVES], .select2-selection__rendered[title=WAVES] {
+    background-image: url(https://quickex.io/images/coins/WAVES.svg)
+}
+
+.select2-results__option[id*=WAVES]::after {
+    content: 'Waves'
+}
+
+.icon_USDT, .select2-results__option[id*=USDT], .select2-selection__rendered[title=USDT] {
+    background-image: url(https://quickex.io/images/coins/USDT.svg)
+}
+
+.select2-results__option[id*=USDT]::after {
+    content: 'Tether USD'
+}
+
+.icon_SWT, .select2-results__option[id*=SWT], .select2-selection__rendered[title=SWT] {
+    background-image: url(https://quickex.io/images/coins/SWT.svg)
+}
+
+.select2-results__option[id*=SWT]::after {
+    content: 'Swarm city'
+}
+
+.icon_MLN, .select2-results__option[id*=MLN], .select2-selection__rendered[title=MLN] {
+    background-image: url(https://quickex.io/images/coins/MLN.svg)
+}
+
+.select2-results__option[id*=MLN]::after {
+    content: 'Melon'
+}
+
+.icon_DGD, .select2-results__option[id*=DGD], .select2-selection__rendered[title=DGD] {
+    background-image: url(https://quickex.io/images/coins/DGD.svg)
+}
+
+.select2-results__option[id*=DGD]::after {
+    content: 'DigixDAO'
+}
+
+.icon_TRST, .select2-results__option[id*=TRST], .select2-selection__rendered[title=TRST] {
+    background-image: url(https://quickex.io/images/coins/TRST.svg)
+}
+
+.select2-results__option[id*=TRST]::after {
+    content: 'Trustcoin'
+}
+
+.icon_EDG, .select2-results__option[id*=EDG], .select2-selection__rendered[title=EDG] {
+    background-image: url(https://quickex.io/images/coins/EDG.svg)
+}
+
+.select2-results__option[id*=EDG]::after {
+    content: 'Edgeless'
+}
+
+.icon_WINGS, .select2-results__option[id*=WINGS], .select2-selection__rendered[title=WINGS] {
+    background-image: url(https://quickex.io/images/coins/WINGS.svg)
+}
+
+.select2-results__option[id*=WINGS]::after {
+    content: 'Wings DAO'
+}
+
+.icon_RLC, .select2-results__option[id*=RLC], .select2-selection__rendered[title=RLC] {
+    background-image: url(https://quickex.io/images/coins/RLC.svg)
+}
+
+.select2-results__option[id*=RLC]::after {
+    content: 'iEx.ec'
+}
+
+.icon_GNO, .select2-results__option[id*=GNO], .select2-selection__rendered[title=GNO] {
+    background-image: url(https://quickex.io/images/coins/GNO.svg)
+}
+
+.select2-results__option[id*=GNO]::after {
+    content: 'Gnosis'
+}
+
+.icon_DCR, .select2-results__option[id*=DCR], .select2-selection__rendered[title=DCR] {
+    background-image: url(https://quickex.io/images/coins/DCR.svg)
+}
+
+.select2-results__option[id*=DCR]::after {
+    content: 'Decred'
+}
+
+.icon_GUP, .select2-results__option[id*=GUP], .select2-selection__rendered[title=GUP] {
+    background-image: url(https://quickex.io/images/coins/GUP.svg)
+}
+
+.select2-results__option[id*=GUP]::after {
+    content: 'Guppy'
+}
+
+.icon_SYS, .select2-results__option[id*=SYS], .select2-selection__rendered[title=SYS] {
+    background-image: url(https://quickex.io/images/coins/SYS.svg)
+}
+
+.select2-results__option[id*=SYS]::after {
+    content: 'Syscoin'
+}
+
+.icon_LUN, .select2-results__option[id*=LUN], .select2-selection__rendered[title=LUN] {
+    background-image: url(https://quickex.io/images/coins/LUN.svg)
+}
+
+.select2-results__option[id*=LUN]::after {
+    content: 'Lunyr'
+}
+
+.icon_XLM, .select2-results__option[id*=XLM], .select2-selection__rendered[title=XLM] {
+    background-image: url(https://quickex.io/images/coins/XLM.svg)
+}
+
+.select2-results__option[id*=XLM]::after {
+    content: 'Stellar Lumens'
+}
+
+.icon_BAT, .select2-results__option[id*=BAT], .select2-selection__rendered[title=BAT] {
+    background-image: url(https://quickex.io/images/coins/BAT.svg)
+}
+
+.select2-results__option[id*=BAT]::after {
+    content: 'Basic Attention Token'
+}
+
+.icon_ANT, .select2-results__option[id*=ANT], .select2-selection__rendered[title=ANT] {
+    background-image: url(https://quickex.io/images/coins/ANT.svg)
+}
+
+.select2-results__option[id*=ANT]::after {
+    content: 'Aragon'
+}
+
+.icon_BNT, .select2-results__option[id*=BNT], .select2-selection__rendered[title=BNT] {
+    background-image: url(https://quickex.io/images/coins/BNT.svg)
+}
+
+.select2-results__option[id*=BNT]::after {
+    content: 'Bancor Network Token'
+}
+
+.icon_CVC, .select2-results__option[id*=CVC], .select2-selection__rendered[title=CVC] {
+    background-image: url(https://quickex.io/images/coins/CVC.svg)
+}
+
+.select2-results__option[id*=CVC]::after {
+    content: 'Civic'
+}
+
+.icon_EOS, .select2-results__option[id*=EOS], .select2-selection__rendered[title=EOS] {
+    background-image: url(https://quickex.io/images/coins/EOS.svg)
+}
+
+.select2-results__option[id*=EOS]::after {
+    content: 'EOS'
+}
+
+.icon_PAY, .select2-results__option[id*=PAY], .select2-selection__rendered[title=PAY] {
+    background-image: url(https://quickex.io/images/coins/PAY.svg)
+}
+
+.select2-results__option[id*=PAY]::after {
+    content: 'TenXPay'
+}
+
+.icon_NEO, .select2-results__option[id*=NEO], .select2-selection__rendered[title=NEO] {
+    background-image: url(https://quickex.io/images/coins/NEO.svg)
+}
+
+.select2-results__option[id*=NEO]::after {
+    content: 'Neo'
+}
+
+.icon_OMG, .select2-results__option[id*=OMG], .select2-selection__rendered[title=OMG] {
+    background-image: url(https://quickex.io/images/coins/OMG.svg)
+}
+
+.select2-results__option[id*=OMG]::after {
+    content: 'OmiseGo'
+}
+
+.icon_MCO, .select2-results__option[id*=MCO], .select2-selection__rendered[title=MCO] {
+    background-image: url(https://quickex.io/images/coins/MCO.svg)
+}
+
+.select2-results__option[id*=MCO]::after {
+    content: 'Monaco'
+}
+
+.icon_ADX, .select2-results__option[id*=ADX], .select2-selection__rendered[title=ADX] {
+    background-image: url(https://quickex.io/images/coins/ADX.svg)
+}
+
+.select2-results__option[id*=ADX]::after {
+    content: 'AdEx'
+}
+
+.icon_ZRX, .select2-results__option[id*=ZRX], .select2-selection__rendered[title=ZRX] {
+    background-image: url(https://quickex.io/images/coins/ZRX.svg)
+}
+
+.select2-results__option[id*=ZRX]::after {
+    content: '0x Protocol Token'
+}
+
+.icon_QTUM, .select2-results__option[id*=QTUM], .select2-selection__rendered[title=QTUM] {
+    background-image: url(https://quickex.io/images/coins/QTUM.svg)
+}
+
+.select2-results__option[id*=QTUM]::after {
+    content: 'Qtum ignition'
+}
+
+.icon_PTOY, .select2-results__option[id*=PTOY], .select2-selection__rendered[title=PTOY] {
+    background-image: url(https://quickex.io/images/coins/PTOY.svg)
+}
+
+.select2-results__option[id*=PTOY]::after {
+    content: 'Patientory'
+}
+
+.icon_STORJ, .select2-results__option[id*=STORJ], .select2-selection__rendered[title=STORJ] {
+    background-image: url(https://quickex.io/images/coins/STORJ.svg)
+}
+
+.select2-results__option[id*=STORJ]::after {
+    content: 'Storj'
+}
+
+.icon_FUN, .select2-results__option[id*=FUN], .select2-selection__rendered[title=FUN] {
+    background-image: url(https://quickex.io/images/coins/FUN.svg)
+}
+
+.select2-results__option[id*=FUN]::after {
+    content: 'Fun Fair'
+}
+
+.icon_HMQ, .select2-results__option[id*=HMQ], .select2-selection__rendered[title=HMQ] {
+    background-image: url(https://quickex.io/images/coins/HMQ.svg)
+}
+
+.select2-results__option[id*=HMQ]::after {
+    content: 'Humaniq'
+}
+
+.icon_NMR, .select2-results__option[id*=NMR], .select2-selection__rendered[title=NMR] {
+    background-image: url(https://quickex.io/images/coins/NMR.svg)
+}
+
+.select2-results__option[id*=NMR]::after {
+    content: 'Numeraire'
+}
+
+.icon_SALT, .select2-results__option[id*=SALT], .select2-selection__rendered[title=SALT] {
+    background-image: url(https://quickex.io/images/coins/SALT.svg)
+}
+
+.select2-results__option[id*=SALT]::after {
+    content: 'Salt'
+}
+
+.icon_XVG, .select2-results__option[id*=XVG], .select2-selection__rendered[title=XVG] {
+    background-image: url(https://quickex.io/images/coins/XVG.svg)
+}
+
+.select2-results__option[id*=XVG]::after {
+    content: 'Verge'
+}
+
+.icon_BTG, .select2-results__option[id*=BTG], .select2-selection__rendered[title=BTG] {
+    background-image: url(https://quickex.io/images/coins/BTG.svg)
+}
+
+.select2-results__option[id*=BTG]::after {
+    content: 'Bitcoin Gold'
+}
+
+.icon_DGB, .select2-results__option[id*=DGB], .select2-selection__rendered[title=DGB] {
+    background-image: url(https://quickex.io/images/coins/DGB.svg)
+}
+
+.select2-results__option[id*=DGB]::after {
+    content: 'DigByte'
+}
+
+.icon_DNT, .select2-results__option[id*=DNT], .select2-selection__rendered[title=DNT] {
+    background-image: url(https://quickex.io/images/coins/DNT.svg)
+}
+
+.select2-results__option[id*=DNT]::after {
+    content: 'District0x'
+}
+
+.icon_VIB, .select2-results__option[id*=VIB], .select2-selection__rendered[title=VIB] {
+    background-image: url(https://quickex.io/images/coins/VIB.svg)
+}
+
+.select2-results__option[id*=VIB]::after {
+    content: 'Viberate'
+}
+
+.icon_RCN, .select2-results__option[id*=RCN], .select2-selection__rendered[title=RCN] {
+    background-image: url(https://quickex.io/images/coins/RCN.svg)
+}
+
+.select2-results__option[id*=RCN]::after {
+    content: 'Ripio Credit Network'
+}
+
+.icon_POWR, .select2-results__option[id*=POWR], .select2-selection__rendered[title=POWR] {
+    background-image: url(https://quickex.io/images/coins/POWR.svg)
+}
+
+.select2-results__option[id*=POWR]::after {
+    content: 'Power Ledger'
+}
+
+.icon_TRX, .select2-results__option[id*=TRX], .select2-selection__rendered[title=TRX] {
+    background-image: url(https://quickex.io/images/coins/TRX.svg)
+}
+
+.select2-results__option[id*=TRX]::after {
+    content: 'Tron'
+}
+
+.icon_PPT, .select2-results__option[id*=PPT], .select2-selection__rendered[title=PPT] {
+    background-image: url(https://quickex.io/images/coins/PPT.svg)
+}
+
+.select2-results__option[id*=PPT]::after {
+    content: 'Populous'
+}
+
+.icon_STX, .select2-results__option[id*=STX], .select2-selection__rendered[title=STX] {
+    background-image: url(https://quickex.io/images/coins/STX.svg)
+}
+
+.select2-results__option[id*=STX]::after {
+    content: 'Stox'
+}
+
+.icon_KMD, .select2-results__option[id*=KMD], .select2-selection__rendered[title=KMD] {
+    background-image: url(https://quickex.io/images/coins/KMD.svg)
+}
+
+.select2-results__option[id*=KMD]::after {
+    content: 'Komodo'
+}
+
+.icon_WAX, .select2-results__option[id*=WAX], .select2-selection__rendered[title=WAX] {
+    background-image: url(https://quickex.io/images/coins/WAX.svg)
+}
+
+.select2-results__option[id*=WAX]::after {
+    content: 'WAX token'
+}
+
+.icon_BRD, .select2-results__option[id*=BRD], .select2-selection__rendered[title=BRD] {
+    background-image: url(https://quickex.io/images/coins/BRD.svg)
+}
+
+.select2-results__option[id*=BRD]::after {
+    content: 'Bread'
+}
+
+.icon_DCN, .select2-results__option[id*=DCN], .select2-selection__rendered[title=DCN] {
+    background-image: url(https://quickex.io/images/coins/DCN.svg)
+}
+
+.select2-results__option[id*=DCN]::after {
+    content: 'Dentacoin'
+}
+
+.icon_SNM, .select2-results__option[id*=SNM], .select2-selection__rendered[title=SNM] {
+    background-image: url(https://quickex.io/images/coins/SNM.svg)
+}
+
+.select2-results__option[id*=SNM]::after {
+    content: 'SONM'
+}
+
+.icon_NGC, .select2-results__option[id*=NGC], .select2-selection__rendered[title=NGC] {
+    background-image: url(https://quickex.io/images/coins/NGC.svg)
+}
+
+.select2-results__option[id*=NGC]::after {
+    content: 'NAGA Coin'
+}
+
+.icon_NOAH, .select2-results__option[id*=NOAH], .select2-selection__rendered[title=NOAH] {
+    background-image: url(https://quickex.io/images/coins/NOAH.svg)
+}
+
+.select2-results__option[id*=NOAH]::after {
+    content: 'Noah'
+}
+
+.icon_BNB, .select2-results__option[id*=BNB], .select2-selection__rendered[title=BNB] {
+    background-image: url(https://quickex.io/images/coins/BNB.svg)
+}
+
+.select2-results__option[id*=BNB]::after {
+    content: 'Binance token'
+}
+
+.icon_ZEN, .select2-results__option[id*=ZEN], .select2-selection__rendered[title=ZEN] {
+    background-image: url(https://quickex.io/images/coins/ZEN.svg)
+}
+
+.select2-results__option[id*=ZEN]::after {
+    content: 'Horizen'
+}
+
+.icon_AE, .select2-results__option[id*=AE], .select2-selection__rendered[title=AE] {
+    background-image: url(https://quickex.io/images/coins/AE.svg)
+}
+
+.select2-results__option[id*=AE]::after {
+    content: 'Aeternity'
+}
+
+.icon_WTC, .select2-results__option[id*=WTC], .select2-selection__rendered[title=WTC] {
+    background-image: url(https://quickex.io/images/coins/WTC.svg)
+}
+
+.select2-results__option[id*=WTC]::after {
+    content: 'Waltonchain'
+}
+
+.icon_ARK, .select2-results__option[id*=ARK], .select2-selection__rendered[title=ARK] {
+    background-image: url(https://quickex.io/images/coins/ARK.svg)
+}
+
+.select2-results__option[id*=ARK]::after {
+    content: 'Ark'
+}
+
+.icon_ARN, .select2-results__option[id*=ARN], .select2-selection__rendered[title=ARN] {
+    background-image: url(https://quickex.io/images/coins/ARN.svg)
+}
+
+.select2-results__option[id*=ARN]::after {
+    content: 'Aeron'
+}
+
+.icon_ZAP, .select2-results__option[id*=ZAP], .select2-selection__rendered[title=ZAP] {
+    background-image: url(https://quickex.io/images/coins/ZAP.svg)
+}
+
+.select2-results__option[id*=ZAP]::after {
+    content: 'Zap'
+}
+
+.icon_ABYSS, .select2-results__option[id*=ABYSS], .select2-selection__rendered[title=ABYSS] {
+    background-image: url(https://quickex.io/images/coins/ABYSS.svg)
+}
+
+.select2-results__option[id*=ABYSS]::after {
+    content: 'The Abyss'
+}
+
+.icon_LRC, .select2-results__option[id*=LRC], .select2-selection__rendered[title=LRC] {
+    background-image: url(https://quickex.io/images/coins/LRC.svg)
+}
+
+.select2-results__option[id*=LRC]::after {
+    content: 'Loopring'
+}
+
+.icon_POLY, .select2-results__option[id*=POLY], .select2-selection__rendered[title=POLY] {
+    background-image: url(https://quickex.io/images/coins/POLY.svg)
+}
+
+.select2-results__option[id*=POLY]::after {
+    content: 'Polymath'
+}
+
+.icon_XZC, .select2-results__option[id*=XZC], .select2-selection__rendered[title=XZC] {
+    background-image: url(https://quickex.io/images/coins/XZC.svg)
+}
+
+.select2-results__option[id*=XZC]::after {
+    content: 'ZCoin'
+}
+
+.icon_SMART, .select2-results__option[id*=SMART], .select2-selection__rendered[title=SMART] {
+    background-image: url(https://quickex.io/images/coins/SMART.svg)
+}
+
+.select2-results__option[id*=SMART]::after {
+    content: 'SmartCash'
+}
+
+.icon_BQX, .select2-results__option[id*=BQX], .select2-selection__rendered[title=BQX] {
+    background-image: url(https://quickex.io/images/coins/BQX.svg)
+}
+
+.select2-results__option[id*=BQX]::after {
+    content: 'Ethos'
+}
+
+.icon_NEXO, .select2-results__option[id*=NEXO], .select2-selection__rendered[title=NEXO] {
+    background-image: url(https://quickex.io/images/coins/NEXO.svg)
+}
+
+.select2-results__option[id*=NEXO]::after {
+    content: 'Nexo'
+}
+
+.icon_ONT, .select2-results__option[id*=ONT], .select2-selection__rendered[title=ONT] {
+    background-image: url(https://quickex.io/images/coins/ONT.svg)
+}
+
+.select2-results__option[id*=ONT]::after {
+    content: 'Ontology'
+}
+
+.icon_BETR, .select2-results__option[id*=BETR], .select2-selection__rendered[title=BETR] {
+    background-image: url(https://quickex.io/images/coins/BETR.svg)
+}
+
+.select2-results__option[id*=BETR]::after {
+    content: 'BetterBetting'
+}
+
+.icon_ENJ, .select2-results__option[id*=ENJ], .select2-selection__rendered[title=ENJ] {
+    background-image: url(https://quickex.io/images/coins/ENJ.svg)
+}
+
+.select2-results__option[id*=ENJ]::after {
+    content: 'Enjin'
+}
+
+.icon_BCD, .select2-results__option[id*=BCD], .select2-selection__rendered[title=BCD] {
+    background-image: url(https://quickex.io/images/coins/BCD.svg)
+}
+
+.select2-results__option[id*=BCD]::after {
+    content: 'Bitcoin Diamond'
+}
+
+.icon_KNC, .select2-results__option[id*=KNC], .select2-selection__rendered[title=KNC] {
+    background-image: url(https://quickex.io/images/coins/KNC.svg)
+}
+
+.select2-results__option[id*=KNC]::after {
+    content: 'Kyber Network'
+}
+
+.icon_TUSD, .select2-results__option[id*=TUSD], .select2-selection__rendered[title=TUSD] {
+    background-image: url(https://quickex.io/images/coins/TUSD.svg)
+}
+
+.select2-results__option[id*=TUSD]::after {
+    content: 'TrueUSD'
+}
+
+.icon_HT, .select2-results__option[id*=HT], .select2-selection__rendered[title=HT] {
+    background-image: url(https://quickex.io/images/coins/HT.svg)
+}
+
+.select2-results__option[id*=HT]::after {
+    content: 'Huobi Token'
+}
+
+.icon_DENT, .select2-results__option[id*=DENT], .select2-selection__rendered[title=DENT] {
+    background-image: url(https://quickex.io/images/coins/DENT.svg)
+}
+
+.select2-results__option[id*=DENT]::after {
+    content: 'Dent'
+}
+
+.icon_BKX, .select2-results__option[id*=BKX], .select2-selection__rendered[title=BKX] {
+    background-image: url(https://quickex.io/images/coins/BKX.svg)
+}
+
+.select2-results__option[id*=BKX]::after {
+    content: 'BANKEX'
+}
+
+.icon_MITH, .select2-results__option[id*=MITH], .select2-selection__rendered[title=MITH] {
+    background-image: url(https://quickex.io/images/coins/MITH.svg)
+}
+
+.select2-results__option[id*=MITH]::after {
+    content: 'Mithril'
+}
+
+.icon_TEL, .select2-results__option[id*=TEL], .select2-selection__rendered[title=TEL] {
+    background-image: url(https://quickex.io/images/coins/TEL.svg)
+}
+
+.select2-results__option[id*=TEL]::after {
+    content: 'Telcoin'
+}
+
+.icon_DAI, .select2-results__option[id*=DAI], .select2-selection__rendered[title=DAI] {
+    background-image: url(https://quickex.io/images/coins/DAI.svg)
+}
+
+.select2-results__option[id*=DAI]::after {
+    content: 'Dai'
+}
+
+.icon_LINK, .select2-results__option[id*=LINK], .select2-selection__rendered[title=LINK] {
+    background-image: url(https://quickex.io/images/coins/LINK.svg)
+}
+
+.select2-results__option[id*=LINK]::after {
+    content: 'ChainLink'
+}
+
+.icon_MKR, .select2-results__option[id*=MKR], .select2-selection__rendered[title=MKR] {
+    background-image: url(https://quickex.io/images/coins/MKR.svg)
+}
+
+.select2-results__option[id*=MKR]::after {
+    content: 'Maker'
+}
+
+.icon_AION, .select2-results__option[id*=AION], .select2-selection__rendered[title=AION] {
+    background-image: url(https://quickex.io/images/coins/AION.svg)
+}
+
+.select2-results__option[id*=AION]::after {
+    content: 'Aion'
+}
+
+.icon_IGNIS, .select2-results__option[id*=IGNIS], .select2-selection__rendered[title=IGNIS] {
+    background-image: url(https://quickex.io/images/coins/IGNIS.svg)
+}
+
+.select2-results__option[id*=IGNIS]::after {
+    content: 'Ignis'
+}
+
+.icon_ADA, .select2-results__option[id*=ADA], .select2-selection__rendered[title=ADA] {
+    background-image: url(https://quickex.io/images/coins/ADA.svg)
+}
+
+.select2-results__option[id*=ADA]::after {
+    content: 'Cardano'
+}
+
+.icon_PROC, .select2-results__option[id*=PROC], .select2-selection__rendered[title=PROC] {
+    background-image: url(https://quickex.io/images/coins/PROC.svg)
+}
+
+.select2-results__option[id*=PROC]::after {
+    content: 'ProCurrency'
+}
+
+.icon_GUSD, .select2-results__option[id*=GUSD], .select2-selection__rendered[title=GUSD] {
+    background-image: url(https://quickex.io/images/coins/GUSD.svg)
+}
+
+.select2-results__option[id*=GUSD]::after {
+    content: 'Gemini Dollar'
+}
+
+.icon_USDC, .select2-results__option[id*=USDC], .select2-selection__rendered[title=USDC] {
+    background-image: url(https://quickex.io/images/coins/USDC.svg)
+}
+
+.select2-results__option[id*=USDC]::after {
+    content: 'USD coin'
+}
+
+.icon_GRS, .select2-results__option[id*=GRS], .select2-selection__rendered[title=GRS] {
+    background-image: url(https://quickex.io/images/coins/GRS.svg)
+}
+
+.select2-results__option[id*=GRS]::after {
+    content: 'Groestlcoin'
+}
+
+.icon_EURS, .select2-results__option[id*=EURS], .select2-selection__rendered[title=EURS] {
+    background-image: url(https://quickex.io/images/coins/EURS.svg)
+}
+
+.select2-results__option[id*=EURS]::after {
+    content: 'STASIS EURS'
+}
+
+.icon_BCHABC, .select2-results__option[id*=BCHABC], .select2-selection__rendered[title=BCHABC] {
+    background-image: url(https://quickex.io/images/coins/BCHABC.svg)
+}
+
+.select2-results__option[id*=BCHABC]::after {
+    content: 'Bitcoin Cash ABC'
+}
+
+.icon_BCHSV, .select2-results__option[id*=BCHSV], .select2-selection__rendered[title=BCHSV] {
+    background-image: url(https://quickex.io/images/coins/BCHSV.svg)
+}
+
+.select2-results__option[id*=BCHSV]::after {
+    content: 'Bitcoin Cash SV'
+}
+
+.icon_DGTX, .select2-results__option[id*=DGTX], .select2-selection__rendered[title=DGTX] {
+    background-image: url(https://quickex.io/images/coins/DGTX.svg)
+}
+
+.select2-results__option[id*=DGTX]::after {
+    content: 'Digitex Futures'
+}
+
+.icon_PAX, .select2-results__option[id*=PAX], .select2-selection__rendered[title=PAX] {
+    background-image: url(https://quickex.io/images/coins/PAX.svg)
+}
+
+.select2-results__option[id*=PAX]::after {
+    content: 'Paxos Standard Token'
+}
+
+.icon_STORM, .select2-results__option[id*=STORM], .select2-selection__rendered[title=STORM] {
+    background-image: url(https://quickex.io/images/coins/STORM.svg)
+}
+
+.select2-results__option[id*=STORM]::after {
+    content: 'Storm'
+}
+
+.icon_MANA, .select2-results__option[id*=MANA], .select2-selection__rendered[title=MANA] {
+    background-image: url(https://quickex.io/images/coins/MANA.svg)
+}
+
+.select2-results__option[id*=MANA]::after {
+    content: 'Decentraland'
+}
+
+.icon_NIM, .select2-results__option[id*=NIM], .select2-selection__rendered[title=NIM] {
+    background-image: url(https://quickex.io/images/coins/NIM.svg)
+}
+
+.select2-results__option[id*=NIM]::after {
+    content: 'Nimiq'
+}
+
+.icon_PMA, .select2-results__option[id*=PMA], .select2-selection__rendered[title=PMA] {
+    background-image: url(https://quickex.io/images/coins/PMA.svg)
+}
+
+.select2-results__option[id*=PMA]::after {
+    content: 'PumaPay'
+}
+
+.icon_RFR, .select2-results__option[id*=RFR], .select2-selection__rendered[title=RFR] {
+    background-image: url(https://quickex.io/images/coins/RFR.svg)
+}
+
+.select2-results__option[id*=RFR]::after {
+    content: 'Refereum'
+}
+
+.icon_XTZ, .select2-results__option[id*=XTZ], .select2-selection__rendered[title=XTZ] {
+    background-image: url(https://quickex.io/images/coins/XTZ.svg)
+}
+
+.select2-results__option[id*=XTZ]::after {
+    content: 'Tezos'
+}
+
+.icon_BTT, .select2-results__option[id*=BTT], .select2-selection__rendered[title=BTT] {
+    background-image: url(https://quickex.io/images/coins/BTT.svg)
+}
+
+.select2-results__option[id*=BTT]::after {
+    content: 'BitTorrent'
+}
+
+.icon_GAS, .select2-results__option[id*=GAS], .select2-selection__rendered[title=GAS] {
+    background-image: url(https://quickex.io/images/coins/GAS.svg)
+}
+
+.select2-results__option[id*=GAS]::after {
+    content: 'Gas'
+}
+
+.icon_FET, .select2-results__option[id*=FET], .select2-selection__rendered[title=FET] {
+    background-image: url(https://quickex.io/images/coins/FET.svg)
+}
+
+.select2-results__option[id*=FET]::after {
+    content: 'Fetch'
+}
+
+.icon_BDG, .select2-results__option[id*=BDG], .select2-selection__rendered[title=BDG] {
+    background-image: url(https://quickex.io/images/coins/BDG.svg)
+}
+
+.select2-results__option[id*=BDG]::after {
+    content: 'BadgerCoin'
+}
+
+
+.select2-container {
+    position: relative;
+    min-width: 104px
+}
+
+.select2-container.select2-container--currency {
+    width: 64px !important;
+    padding-top: 8px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: transparent
+}
+
+.select2-container.select2-container--currency:hover {
+    background-color: rgba(255, 255, 255, 0)
+}
+
+.select2-container.select2-container--currency.select2-container--open {
+    background: none;
+}
+
+.select2-container.select2-container--currency.select2-container--focus {
+    border-color: rgba(32, 30, 40, .5)
+}
+
+.select2-container.select2-container--currency.select2-container--open.select2-container--focus {
+    border-color: transparent
+}
+
+.select2-container.select2-container--currency.select2-container--below.select2-container--open {
+    border-bottom: 1px solid #f3f3f3
+}
+
+.select2-container.select2-container--currency.select2-container--above.select2-container--open {
+    border-top: 1px solid #f3f3f3
+}
+
+.select2-container.select2-container--currency .select2-selection:focus {
+    outline: 0
+}
+
+.select2-container.select2-container--currency .select2-selection__rendered {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    color: #848E9C;
+    padding-left: 20px;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 14px
+}
+
+.select2-container.select2-container--currency .select2-selection__arrow b {
+    position: absolute;
+    top: 9px;
+    right: 5px;
+    display: block;
+    width: 9px;
+    height: 9px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-right: 2px solid #848E9C;
+    border-bottom: 2px solid #848E9C;
+}
+
+.select2-container.select2-container--currency .select2-dropdown {
+    width: 320px !important;
+    margin-top: -52px;
+    margin-left: -221px;
+    border: none;
+    -webkit-box-shadow: 0 4px 21px rgba(0, 0, 0, .06);
+    box-shadow: 0 4px 21px rgba(0, 0, 0, .06)
+}
+
+.select2-container.select2-container--currency .select2-dropdown--above {
+    margin-top: -9px
+}
+
+.select2-container.select2-container--currency .select2-search__field {
+    padding-right: 33px;
+    padding-left: 40px;
+    border: 1px solid transparent;
+    height: 30px;
+}
+
+.select2-container.select2-container--currency .select2-search__field:focus {
+    outline: 0
+}
+
+.select2-container.select2-container--currency .select2-results__options {
+    overflow-y: auto;
+    max-height: 300px;
+    scrollbar-color: rgba(183, 20, 55, .2) #fff;
+    scrollbar-width: thin
+}
+
+.select2-container.select2-container--currency .select2-results__options::-webkit-scrollbar {
+    width: 5px
+}
+
+.select2-container.select2-container--currency .select2-results__options::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: rgba(183, 20, 55, .2)
+}
+
+.select2-container.select2-container--currency .select2-results__option {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    color: #848E9C;
+    position: relative;
+    padding: 17px 7px;
+    padding-left: 44px;
+    background-repeat: no-repeat;
+    background-position: 20px;
+    background-size: 14px;
+    margin: 0;
+    height: 50px;
+}
+
+.select2-container.select2-container--currency .select2-results__option::after {
+    position: absolute;
+    left: 100px;
+    display: inline-block;
+    min-width: 119px;
+    margin-left: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    color: #848E9C;
+}
+
+.select2-container.select2-container--currency .select2-results__option--highlighted, .select2-container.select2-container--currency .select2-results__option.focus, .select2-container.select2-container--currency .select2-results__option:focus, .select2-container.select2-container--currency .select2-results__option:hover {
+    background-color: rgba(0, 0, 0, .05)
+}
+
+.select2-container.select2-container--currency .select2-search--dropdown {
+    position: relative;
+    border-bottom: 1px solid #f3f3f3
+}
+
+.select2-container.select2-container--currency .select2-search__close {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-indent: -9999px;
+    opacity: .4;
+    border: none;
+    background-color: transparent;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjMzY0MTUzIj48cGF0aCBkPSJNMTksNi40MUwxNy41OSw1TDEyLDEwLjU5TDYuNDEsNUw1LDYuNDFMMTAuNTksMTJMNSwxNy41OUw2LjQxLDE5TDEyLDEzLjQxTDE3LjU5LDE5TDE5LDE3LjU5TDEzLjQxLDEyTDE5LDYuNDFaIi8+PC9zdmc+);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.select2-container.select2-container--currency .select2-search__close:hover {
+    opacity: 1
+}
+
+.select2-container.select2-container--currency .select2-search__close:focus {
+    outline: 0
+}
+
+.select2-container.select2-container--currency .select2-search__label {
+    position: relative;
+    width: 100%
+}
+
+.select2-container.select2-container--currency .select2-search__label-text {
+    display: none
+}
+
+.select2-container.select2-container--currency .select2-search__label::after {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    content: '';
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAxNzkyIDE3OTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2I0YjRjMCI+PHBhdGggZD0iTTEyMTYgODMycTAtMTg1LTEzMS41LTMxNi41dC0zMTYuNS0xMzEuNS0zMTYuNSAxMzEuNS0xMzEuNSAzMTYuNSAxMzEuNSAzMTYuNSAzMTYuNSAxMzEuNSAzMTYuNS0xMzEuNSAxMzEuNS0zMTYuNXptNTEyIDgzMnEwIDUyLTM4IDkwdC05MCAzOHEtNTQgMC05MC0zOGwtMzQzLTM0MnEtMTc5IDEyNC0zOTkgMTI0LTE0MyAwLTI3My41LTU1LjV0LTIyNS0xNTAtMTUwLTIyNS01NS41LTI3My41IDU1LjUtMjczLjUgMTUwLTIyNSAyMjUtMTUwIDI3My41LTU1LjUgMjczLjUgNTUuNSAyMjUgMTUwIDE1MCAyMjUgNTUuNSAyNzMuNXEwIDIyMC0xMjQgMzk5bDM0MyAzNDNxMzcgMzcgMzcgOTB6Ii8+PC9zdmc+);
+    background-size: cover
+}
